@@ -24,7 +24,7 @@ public class Main {
         menu.addNewOption("Show Employee’s higest salary");
         menu.addNewOption("Show Leader of the Team has most Employees");
         menu.addNewOption("Sort Employees as descending salary");
-        menu.addNewOption("Show All Employees"); //optional, mình muốn check lại dữ liệu mỗi khi được chỉnh sửa
+        menu.addNewOption("Show All Employees (optional)"); //mình muốn check lại dữ liệu mỗi khi được chỉnh sửa
         menu.addNewOption("Write file");
         menu.addNewOption("Exit");
 
