@@ -1,15 +1,13 @@
 package viewer;
 
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class GUI extends JFrame {
 
+    private Controller controller;
+    
     public GUI() {
+        controller = new Controller();
         initGUI();
     }
 
@@ -17,7 +15,8 @@ public class GUI extends JFrame {
         setTitle("Company Employee Management Program");
         setSize(800, 800);
 
-        add(new App());
+        
+        add(new App(controller)); //app sẽ gọi Controller (Main)
 
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

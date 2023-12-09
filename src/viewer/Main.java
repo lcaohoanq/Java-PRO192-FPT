@@ -1,23 +1,36 @@
 package viewer;
 
-import com.sun.corba.se.impl.orb.ParserTable;
 import controller.*;
-import model.Tester;
 import tool.ConsoleColors;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        
-        final String fileEmp = "src\\input\\ListOfEmployees.txt";
-        final String filePL = "src\\input\\PLInfo.txt";
-        final String fileWrite1 = "src\\output\\Req2.txt";
-        final String fileWrite2 = "src\\output\\Req3.txt";
-        
-        int choice = 0;
+    final String fileEmp = "src\\input\\ListOfEmployees.txt";
+    final String filePL = "src\\input\\PLInfo.txt";
+    final String fileWrite1 = "src\\output\\Req2.txt";
+    final String fileWrite2 = "src\\output\\Req3.txt";
 
-        Menu menu = new Menu("Company Employee Management Program");
+    int choice = 0;
 
+    Menu menu = new Menu("Company Employee Management Program");
+
+    CompanyManagement cm = new CompanyManagement();
+    
+//    App app = new App();
+
+    public Main() throws Exception {
+        
+        
+        initMenu();
+
+        System.out.println(ConsoleColors.YELLOW + "Note: \nAll employee's salary based on the actual salary after multiply with the bonus and casted into integer!!!" + ConsoleColors.RESET);
+
+        
+        doManagement(); //nhận vào tham số từ GUI và chạy chức năng tương ứng
+
+    }
+
+    private void initMenu() {
         menu.addNewOption("Read all Employees and print to screen");
         menu.addNewOption("Show staff proficient in a Programming Language");
         menu.addNewOption("Show Tester has a height salary");
@@ -27,10 +40,9 @@ public class Main {
         menu.addNewOption("Show All Employees (optional)"); //mình muốn check lại dữ liệu mỗi khi được chỉnh sửa
         menu.addNewOption("Write file");
         menu.addNewOption("Exit");
+    }
 
-        CompanyManagement cm = new CompanyManagement();
-
-        System.out.println(ConsoleColors.YELLOW + "Note: \nAll employee's salary based on the actual salary after multiply with the bonus and casted into integer!!!" + ConsoleColors.RESET);
+    private void doManagement() throws Exception {
         do {
             menu.print();
             choice = menu.getChoice();
@@ -65,6 +77,9 @@ public class Main {
                 }
             }
         } while (choice > 0 && choice < menu.getSize());
+    }
 
+    public static void main(String[] args) throws Exception {
+        new Main();
     }
 }
