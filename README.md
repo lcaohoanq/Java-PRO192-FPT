@@ -1,4 +1,6 @@
 # Project Assignment
+## The home menu
+![updateTheme](https://github.com/lcaohoanq/PRO192-ASM-FPT/assets/136492579/2ca33c5d-3d84-49d4-8a2b-467113651a07)
 ## Title 
 Employee management in a computer company
 ## Background
@@ -17,5 +19,5 @@ TeamLeader and Testers.
     - Req2.txt: result list of staff proficient in C++. 
     - Req3.txt: list of employees with salary > 4,700,000. 
 8. Exit
-## The following is home menu of this project
-![image info](./doc/asmPRO192.png)
+
+
