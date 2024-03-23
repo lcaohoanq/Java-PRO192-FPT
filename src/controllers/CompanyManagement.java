@@ -38,8 +38,8 @@ public class CompanyManagement {
     public boolean isSorted = false;
 
     // reads from the file into the empList
-    public ArrayList<Employee> getEmployeeFromFile(String path1, String path2) throws Exception {
-        empList.clear();
+    public ArrayList<Employee> getEmployeeFromFile(String path1, String path2) {
+//        empList.clear();
         ArrayList<Employee> list = null;
         try {
             File fPLInfo = new File(path2);
@@ -149,7 +149,7 @@ public class CompanyManagement {
             Message.createSuccessMsg("Get employee from file successfully");
             System.out.println("Read and print file successfully!");
         } catch (Exception ex) {
-            throw ex;
+            System.out.println("Error reading file: " + ex.getMessage());
         }
         return list;
 
@@ -174,7 +174,7 @@ public class CompanyManagement {
 
     // list of programmers who are proficient in the input pl programmingLanguage.
     public void getDeveloperByProgrammingLanguage(String pl) {
-        devSearchedList.clear();
+//        devSearchedList.clear();
         if (developerList.isEmpty()) {
             Message.createReadFileFirstMsg();
             System.out.println("Nothing to find, please read file first!");
@@ -214,9 +214,9 @@ public class CompanyManagement {
     }
 
     // list of testers whose total salary is greater than the value of the parameter
-    public void getTestersHaveSalaryGreaterThan() throws Exception {
+    public void getTestersHaveSalaryGreaterThan(){
         // reset lại dữ liệu khi bấm nút
-        testerSearchedList.clear();
+//        testerSearchedList.clear();
         if (testerList.isEmpty()) {
             Message.createReadFileFirstMsg();
             System.out.println("Nothing to find, please read file first!");
@@ -239,7 +239,7 @@ public class CompanyManagement {
 
     }
 
-    public void getEmployeeWithHighestSalary() throws Exception {
+    public void getEmployeeWithHighestSalary(){
         if (empList.isEmpty()) {
             Message.createReadFileFirstMsg();
             System.out.println("Nothing to find, please read file first!");
@@ -255,7 +255,7 @@ public class CompanyManagement {
     }
 
     // get the team leader of the group with the most programmers
-    public void getLeaderWithMostEmployees() throws Exception {
+    public void getLeaderWithMostEmployees(){
 
         if (developerList.isEmpty()) {
             Message.createReadFileFirstMsg();
@@ -328,7 +328,7 @@ public class CompanyManagement {
 
     } // Sort Employees as descending salary
 
-    public ArrayList<Employee> sorted() throws Exception {
+    public ArrayList<Employee> sorted(){
         // clone new sortedList from empList
         ArrayList<Employee> sortedList = new ArrayList<>(empList);
 
@@ -409,7 +409,7 @@ public class CompanyManagement {
     }
 
     // write emplist
-    public boolean writeFile(String path) throws Exception {
+    public boolean writeFile(String path){
         try {
             File f = new File(path);
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(f));

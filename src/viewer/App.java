@@ -1,9 +1,6 @@
 package viewer;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import controllers.Controller;
+import controllers.AppController;
 import enums.MenuEnum;
 import styles.BorderHandler;
 import styles.ColorHandler;
@@ -42,10 +39,10 @@ public class App extends JFrame implements ActionListener {
     // private GridLayout layout = new GridLayout(3, 3, 5, 5);
     private JButton btn;
     private static int btnValue = 0; //
-    private Controller controller; // Reference to the Controller
+//    private Controller controller; // Reference to the Controller
 
     public App() {
-        this.controller = new Controller(); // Set the reference to the Controller
+//        this.controller = new Controller(); // Set the reference to the Controller
         this.setSize(SizeHandler.WINDOW_WIDTH, SizeHandler.WINDOW_HEIGHT);
         this.setTitle("Company Employee Management Program");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,8 +58,6 @@ public class App extends JFrame implements ActionListener {
         initViewerZone();
         initContainer();
         this.add(panel);
-        System.out.println("size of panel: " + jPanel_RightPanel.getSize());
-        System.out.println("size of viewer: " + jPanel_LeftPanel_TextArea.getSize());
     }
 
     private void initTitleZone() {
@@ -85,7 +80,7 @@ public class App extends JFrame implements ActionListener {
             btn.setBackground(ColorHandler.TEXT_COLOR);
             btn.setForeground(ColorHandler.PRIMARY_COLOR);
             btn.setFont(FontHandler.BUTTON_FONT);
-            btn.addActionListener(this);
+            btn.addActionListener(new AppController(this));
             btn.setActionCommand(Integer.toString(button.getKey()));
             jPanel_Button.add(btn);
         }
@@ -127,7 +122,7 @@ public class App extends JFrame implements ActionListener {
         System.out.println(ConsoleColors.GREEN + "Action: " + btnValue + ConsoleColors.RESET);
 
         // Call the controller method with the button value
-        controller.doManagement(btnValue);
+//        controller.doManagement(btnValue);
     }
 
     public static int getBtnValue() {
