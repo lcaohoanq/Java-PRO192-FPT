@@ -1,0 +1,41 @@
+D01_Nguyen Dinh Minh Khoi    _5000000   
+_Run_[C, C#, C++]_1
+D02_Pham Le Anh Khoa         _6000000   
+_Fly_[C, Java]_3
+D03_Tran Tuan Kiet           _12000000  
+_Run_[Java, Java Script]_7
+D04_To Quoc Bao              _10000000  
+_Walk_[C, C++]_3_0.3
+D05_Tran Bao Tin             _10000000  
+_Jump_[Java, C#]_3_0.1
+D06_Le Van Nam               _8000000   
+_Jump_[PHP, Ruby]_1
+T03_Pham Thi Nhu             _6000000   
+_0.3_AT
+
+T04_Nguyen Duy An            _5000000   
+_0.5_MT
+
+D07_Nguyen Quoc Tin          _15000000  
+_Fly_[C, Golang]_5_0.2
+D08_Dung Cam Quang           _13000000  
+_Run_[C++, Java]_3_0.2
+D09_Nguyen Quang Duy         _10000000  
+_Walk_[Java, PHP, Java Script]_5
+D10_Dang Thanh Tu            _9000000   
+_Run_[Java]_2
+D11_Huynh Tan Hung           _12000000  
+_Fly_[Golang, Swift]_6
+T05_Vu Thi Hanh              _4000000   
+_0.2_MT
+
+T06_Truong My Lien           _7000000   
+_0.1_AT
+
+T07_Do Thi Nhan              _8000000   
+_0.4_AT
+
+D12_Tran Duc Minh            _9000000   
+_Walk_[C, Java, PHP]_3
+D13_Nguyen Thanh Quan        _10000000  
+_Walk_[C++, Java, PHP]_5

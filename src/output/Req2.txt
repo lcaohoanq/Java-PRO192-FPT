@@ -1,4 +1,0 @@
-D01_Nguyen Dinh Minh Khoi    _5000000   _Run_[C, C#, C++]_1
-D04_To Quoc Bao              _10000000  _Walk_[C, C++]_3_0.3
-D08_Dung Cam Quang           _13000000  _Run_[C++, Java]_3_0.2
-D13_Nguyen Thanh Quan        _10000000  _Walk_[C++, Java, PHP]_5
